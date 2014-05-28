@@ -309,7 +309,7 @@ header.page-header {
 .section-whois {
        
 
-	background-image: url('img/whois-bg.png');
+	background-image: url('https://bytebucket.org/Stubb0rn/web-dev-training/raw/e5a29f3559a6a2be9764922c4c9452a7bb9c70e7/Layout/img/whois-bg.png');
 	
 min-width: 1200px;
     height: 500px;
@@ -401,7 +401,7 @@ max-width: 1200px;
 
 
 .section-contact {
-	background-image: url(img/contact-bg.png);
+	background-image: url(https://bytebucket.org/Stubb0rn/web-dev-training/raw/e5a29f3559a6a2be9764922c4c9452a7bb9c70e7/Layout/img/contact-bg.png);
 	min-width: 1200px;
     height: 700px;
     background-position: center;
