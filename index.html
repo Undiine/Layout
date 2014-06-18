@@ -1,6 +1,30 @@
 <!doctype html>
 <html lang="en">
 <head>
+
+<script>
+function validateForm() {
+    var x = document.forms["e-mail"]["email"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");
+        return false;
+    }
+}
+
+
+function notEmpty(elem, helperMsg){
+	if(elem.value.length < 4){
+		alert(helperMsg);
+		elem.focus(); // set the focus to this input
+		return false;
+	}
+	return true;
+}
+
+</script>
+
     <meta charset="UTF-8">
     <title>Test page</title>
     <link rel="stylesheet" href="main.css"/>
@@ -158,7 +182,7 @@ Tiramisu applicake jujubes.</td></tr>
 <li>(715)946-1234</li></ul></p>
 
 
-<div><form action="/cgi-bin/hello_get.cgi" method="get">
+<div><form action="/cgi-bin/hello_get.cgi" onsubmit="return validateForm();" method="post">
 <p>FULL NAME</p>
 <input type="text" name="name" style="background-color: transparent; height:60px; width:500px"/>
 <br></br>
